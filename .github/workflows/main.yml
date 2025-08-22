@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-20.04
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
     permissions:
       pages: write
       id-token: write
